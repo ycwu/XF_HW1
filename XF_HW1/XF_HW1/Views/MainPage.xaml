@@ -1,0 +1,376 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="XF_HW1.Views.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+    x:Name="ThisPage"
+    Title="計算機"
+    prism:ViewModelLocator.AutowireViewModel="True">
+    <Grid
+        Margin="10,10,10,10"
+        ColumnSpacing="0"
+        RowSpacing="0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40" />
+            <RowDefinition Height="120" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <BoxView
+            Grid.Row="0"
+            Grid.Column="0"
+            BackgroundColor="Black"
+            HorizontalOptions="Fill"
+            VerticalOptions="Fill" />
+        <BoxView
+            Grid.Row="1"
+            Grid.Column="0"
+            BackgroundColor="Black"
+            HorizontalOptions="Fill"
+            VerticalOptions="Fill" />
+        <Label
+            Grid.Row="0"
+            Grid.Column="0"
+            FontSize="16"
+            HorizontalOptions="End"
+            Text="{Binding Expression}"
+            TextColor="White"
+            VerticalOptions="Center" />
+        <Label
+            Grid.Row="1"
+            Grid.Column="0"
+            FontSize="36"
+            HorizontalOptions="End"
+            Text="{Binding Result}"
+            TextColor="White"
+            VerticalOptions="Center" />
+        <Grid
+            Grid.Row="2"
+            Grid.Column="0"
+            BackgroundColor="Black"
+            ColumnSpacing="0"
+            RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <BoxView
+                Grid.Row="0"
+                Grid.Column="0"
+                Margin="0,0,1,1"
+                BackgroundColor="White"
+                HorizontalOptions="Fill"
+                VerticalOptions="Fill">
+                <BoxView.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding BindingContext.ClickCommand, Source={x:Reference ThisPage}}" CommandParameter="7" />
+                </BoxView.GestureRecognizers>
+            </BoxView>
+            <BoxView
+                Grid.Row="0"
+                Grid.Column="1"
+                Margin="0,0,1,1"
+                BackgroundColor="White"
+                HorizontalOptions="Fill"
+                VerticalOptions="Fill">
+                <BoxView.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding BindingContext.ClickCommand, Source={x:Reference ThisPage}}" CommandParameter="8" />
+                </BoxView.GestureRecognizers>
+            </BoxView>
+            <BoxView
+                Grid.Row="0"
+                Grid.Column="2"
+                Margin="0,0,1,1"
+                BackgroundColor="White"
+                HorizontalOptions="Fill"
+                VerticalOptions="Fill">
+                <BoxView.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding BindingContext.ClickCommand, Source={x:Reference ThisPage}}" CommandParameter="9" />
+                </BoxView.GestureRecognizers>
+            </BoxView>
+            <BoxView
+                Grid.Row="1"
+                Grid.Column="0"
+                Margin="0,0,1,1"
+                BackgroundColor="White"
+                HorizontalOptions="Fill"
+                VerticalOptions="Fill">
+                <BoxView.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding BindingContext.ClickCommand, Source={x:Reference ThisPage}}" CommandParameter="4" />
+                </BoxView.GestureRecognizers>
+            </BoxView>
+            <BoxView
+                Grid.Row="1"
+                Grid.Column="1"
+                Margin="0,0,1,1"
+                BackgroundColor="White"
+                HorizontalOptions="Fill"
+                VerticalOptions="Fill">
+                <BoxView.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding BindingContext.ClickCommand, Source={x:Reference ThisPage}}" CommandParameter="5" />
+                </BoxView.GestureRecognizers>
+            </BoxView>
+            <BoxView
+                Grid.Row="1"
+                Grid.Column="2"
+                Margin="0,0,1,1"
+                BackgroundColor="White"
+                HorizontalOptions="Fill"
+                VerticalOptions="Fill">
+                <BoxView.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding BindingContext.ClickCommand, Source={x:Reference ThisPage}}" CommandParameter="6" />
+                </BoxView.GestureRecognizers>
+            </BoxView>
+            <BoxView
+                Grid.Row="2"
+                Grid.Column="0"
+                Margin="0,0,1,1"
+                BackgroundColor="White"
+                HorizontalOptions="Fill"
+                VerticalOptions="Fill">
+                <BoxView.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding BindingContext.ClickCommand, Source={x:Reference ThisPage}}" CommandParameter="1" />
+                </BoxView.GestureRecognizers>
+            </BoxView>
+            <BoxView
+                Grid.Row="2"
+                Grid.Column="1"
+                Margin="0,0,1,1"
+                BackgroundColor="White"
+                HorizontalOptions="Fill"
+                VerticalOptions="Fill">
+                <BoxView.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding BindingContext.ClickCommand, Source={x:Reference ThisPage}}" CommandParameter="2" />
+                </BoxView.GestureRecognizers>
+            </BoxView>
+            <BoxView
+                Grid.Row="2"
+                Grid.Column="2"
+                Margin="0,0,1,1"
+                BackgroundColor="White"
+                HorizontalOptions="Fill"
+                VerticalOptions="Fill">
+                <BoxView.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding BindingContext.ClickCommand, Source={x:Reference ThisPage}}" CommandParameter="3" />
+                </BoxView.GestureRecognizers>
+            </BoxView>
+            <BoxView
+                Grid.Row="0"
+                Grid.Column="3"
+                Margin="0,0,0,1"
+                BackgroundColor="Orange"
+                HorizontalOptions="Fill"
+                VerticalOptions="Fill">
+                <BoxView.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding BindingContext.ClickCommand, Source={x:Reference ThisPage}}" CommandParameter="/" />
+                </BoxView.GestureRecognizers>
+            </BoxView>
+            <BoxView
+                Grid.Row="1"
+                Grid.Column="3"
+                Margin="0,0,0,1"
+                BackgroundColor="Orange"
+                HorizontalOptions="Fill"
+                VerticalOptions="Fill">
+                <BoxView.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding BindingContext.ClickCommand, Source={x:Reference ThisPage}}" CommandParameter="*" />
+                </BoxView.GestureRecognizers>
+            </BoxView>
+            <BoxView
+                Grid.Row="2"
+                Grid.Column="3"
+                Margin="0,0,0,1"
+                BackgroundColor="Orange"
+                HorizontalOptions="Fill"
+                VerticalOptions="Fill">
+                <BoxView.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding BindingContext.ClickCommand, Source={x:Reference ThisPage}}" CommandParameter="-" />
+                </BoxView.GestureRecognizers>
+            </BoxView>
+            <BoxView
+                Grid.Row="3"
+                Grid.Column="3"
+                Margin="0,0,0,1"
+                BackgroundColor="Orange"
+                HorizontalOptions="Fill"
+                VerticalOptions="Fill">
+                <BoxView.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding BindingContext.ClickCommand, Source={x:Reference ThisPage}}" CommandParameter="+" />
+                </BoxView.GestureRecognizers>
+            </BoxView>
+            <BoxView
+                Grid.Row="4"
+                Grid.Column="1"
+                Grid.ColumnSpan="3"
+                BackgroundColor="Orange"
+                HorizontalOptions="Fill"
+                VerticalOptions="Fill">
+                <BoxView.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding BindingContext.ClickCommand, Source={x:Reference ThisPage}}" CommandParameter="=" />
+                </BoxView.GestureRecognizers>
+            </BoxView>
+            <BoxView
+                Grid.Row="3"
+                Grid.Column="0"
+                Grid.ColumnSpan="3"
+                Margin="0,0,1,1"
+                BackgroundColor="White"
+                HorizontalOptions="Fill"
+                VerticalOptions="Fill">
+                <BoxView.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding BindingContext.ClickCommand, Source={x:Reference ThisPage}}" CommandParameter="0" />
+                </BoxView.GestureRecognizers>
+            </BoxView>
+            <BoxView
+                Grid.Row="4"
+                Grid.Column="0"
+                Margin="0,0,1,0"
+                BackgroundColor="#6E6E6E"
+                HorizontalOptions="Fill"
+                VerticalOptions="Fill">
+                <BoxView.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding BindingContext.ClickCommand, Source={x:Reference ThisPage}}" CommandParameter="C" />
+                </BoxView.GestureRecognizers>
+            </BoxView>
+            <Label
+                Grid.Row="0"
+                Grid.Column="0"
+                FontSize="30"
+                HorizontalOptions="Center"
+                Text="7"
+                TextColor="Black"
+                VerticalOptions="Center" />
+            <Label
+                Grid.Row="0"
+                Grid.Column="1"
+                FontSize="30"
+                HorizontalOptions="Center"
+                Text="8"
+                TextColor="Black"
+                VerticalOptions="Center" />
+            <Label
+                Grid.Row="0"
+                Grid.Column="2"
+                FontSize="30"
+                HorizontalOptions="Center"
+                Text="9"
+                TextColor="Black"
+                VerticalOptions="Center" />
+            <Label
+                Grid.Row="0"
+                Grid.Column="3"
+                FontSize="30"
+                HorizontalOptions="Center"
+                Text="/"
+                TextColor="White"
+                VerticalOptions="Center" />
+            <Label
+                Grid.Row="1"
+                Grid.Column="0"
+                FontSize="30"
+                HorizontalOptions="Center"
+                Text="4"
+                TextColor="Black"
+                VerticalOptions="Center" />
+            <Label
+                Grid.Row="1"
+                Grid.Column="1"
+                FontSize="30"
+                HorizontalOptions="Center"
+                Text="5"
+                TextColor="Black"
+                VerticalOptions="Center" />
+            <Label
+                Grid.Row="1"
+                Grid.Column="2"
+                FontSize="30"
+                HorizontalOptions="Center"
+                Text="6"
+                TextColor="Black"
+                VerticalOptions="Center" />
+            <Label
+                Grid.Row="1"
+                Grid.Column="3"
+                FontSize="30"
+                HorizontalOptions="Center"
+                Text="*"
+                TextColor="White"
+                VerticalOptions="Center" />
+            <Label
+                Grid.Row="2"
+                Grid.Column="0"
+                FontSize="30"
+                HorizontalOptions="Center"
+                Text="1"
+                TextColor="Black"
+                VerticalOptions="Center" />
+            <Label
+                Grid.Row="2"
+                Grid.Column="1"
+                FontSize="30"
+                HorizontalOptions="Center"
+                Text="2"
+                TextColor="Black"
+                VerticalOptions="Center" />
+            <Label
+                Grid.Row="2"
+                Grid.Column="2"
+                FontSize="30"
+                HorizontalOptions="Center"
+                Text="3"
+                TextColor="Black"
+                VerticalOptions="Center" />
+            <Label
+                Grid.Row="2"
+                Grid.Column="3"
+                FontSize="30"
+                HorizontalOptions="Center"
+                Text="-"
+                TextColor="White"
+                VerticalOptions="Center" />
+            <Label
+                Grid.Row="3"
+                Grid.Column="1"
+                FontSize="30"
+                HorizontalOptions="Center"
+                Text="0"
+                TextColor="Black"
+                VerticalOptions="Center" />
+            <Label
+                Grid.Row="3"
+                Grid.Column="3"
+                FontSize="30"
+                HorizontalOptions="Center"
+                Text="+"
+                TextColor="White"
+                VerticalOptions="Center" />
+            <Label
+                Grid.Row="4"
+                Grid.Column="0"
+                FontSize="30"
+                HorizontalOptions="Center"
+                Text="C"
+                TextColor="White"
+                VerticalOptions="Center" />
+            <Label
+                Grid.Row="4"
+                Grid.Column="2"
+                FontSize="30"
+                HorizontalOptions="Center"
+                Text="="
+                TextColor="White"
+                VerticalOptions="Center" />
+        </Grid>
+    </Grid>
+</ContentPage>
